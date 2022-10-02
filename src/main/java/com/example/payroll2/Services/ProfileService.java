@@ -40,7 +40,7 @@ public class ProfileService {
     }
     public String  deleteProfile(Long id){
         profileRepository.deleteById(id);
-        return "Employee Deleted succesfully";
+        return "Employee Deleted successfully";
     }
 
 
