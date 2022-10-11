@@ -4,6 +4,7 @@ package com.example.payroll2.Api;
 import com.example.payroll2.Dto.ProfileCreate;
 import com.example.payroll2.Services.ProfileService;
 import com.example.payroll2.Entities.Profile;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,6 +13,8 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/profile")
+@Tag(name = "Profile", description = "Create, update, delete, Read")
+
 public class ProfileController {
     private final ProfileService profileService;
 

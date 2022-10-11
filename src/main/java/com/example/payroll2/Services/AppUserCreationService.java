@@ -7,7 +7,9 @@ import com.example.payroll2.Entities.AppUser;
 import com.example.payroll2.Repositories.AppUserRepository;
 import com.example.payroll2.Repositories.RolesRepository;
 import org.springframework.stereotype.Service;
+import org.w3c.dom.stylesheets.LinkStyle;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -38,6 +40,16 @@ public class AppUserCreationService {
             u.addRoleToUSer(role);
             appUserRepository.save(u);
         });
+        return user;
+    }
+
+    public List<AppUser> getAllUsers(){
+        var users = appUserRepository.findAll();
+        return users;
+    }
+
+    public AppUser getUserById(Long id){
+        var user = appUserRepository.findById(id).get();
         return user;
     }
 

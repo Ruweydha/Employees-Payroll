@@ -2,6 +2,7 @@ package com.example.payroll2.Api;
 
 import com.example.payroll2.Entities.Employee;
 import com.example.payroll2.Services.EmployeeService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -9,6 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/employees")
+@Tag(name = "Employees", description = "Create, update, delete, Read")
 public class EmployeeController {
 
     private final EmployeeService employeeService;
